@@ -854,11 +854,14 @@ Global CSS
 ============
 */
 .global {
-  background-image: url(/src/assets/images/renewable8.jpg);
+  background-image: url(/assets/renewable8-aa7b63cf.jpg);
   height: 550px;
   background-attachment: fixed;
-  padding: 140px 0px;
+  padding: 140px 0;
   color: var(--white);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .global a{
   z-index: 1;
