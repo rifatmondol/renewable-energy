@@ -193,11 +193,9 @@ nav.navbar.hovered {
 .mega-menu:before {
     content: '';
     background: #fff;
-    width: 130%;
+    width: 100vw;
     position: absolute;
-    left: -20%;
-    right: 0;
-    top: 0;
+    left: calc(630px - 50vw);
     bottom: 0;
 }
 .nav-item:hover .mega-menu.active a {
