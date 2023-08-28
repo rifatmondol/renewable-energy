@@ -1,0 +1,1053 @@
+@font-face {
+  font-family: 'Neue Haas Unica Pro';
+  src: url('@/assets/Neue-Haas/NeueHaasUnicaPro-Regular.ttf') format('truetype'),
+    url('@/assets/Neue-Haas/NeueHaasUnicaPro-Medium.ttf') format('truetype'),
+    url('@/assets/Neue-Haas/NeueHaasUnicaPro-Bold.ttf') format('truetype'),;
+}
+
+
+:root{
+
+  --extra-light-green: #00D66426;
+  --light-green:  #00D664;
+  --dark-blue: #1e266d;
+  --dark-blue-2: #21233F;
+  --gray-blue: #445781;
+  --dark-gray: #696969;
+  --dark-gray-2: #cccccc;
+  --white: #fff;
+
+  --off-white: #ebebeb;
+
+  --black: #000;
+  --shadow-black: 0 10px 35px rgba(38,42,76,.1);
+  --shadow-black-2: 0 15px 30px rgba(55,126,249,.15);
+  
+}
+body {
+  font-family: 'Neue Haas Unica Pro'!important;
+}
+
+.container {
+  position: relative;
+  max-width: 1260px !important;
+}
+
+/* Group CSS */
+p,
+span,
+a,
+button,
+input,
+textarea{}
+
+a.bg-light-green{
+  padding: 15px 35px!important;
+  border-radius: 5px;
+  font-size: 17px;
+}
+.subtitle{
+  font-size: 15px!important;
+
+}
+.subtitle, .btn-link{
+  font-weight: 500;
+  color: var(--light-green)!important;
+}
+.title{
+  font-weight: 600!important;
+  letter-spacing: -0.4px!important;
+  color: var(--dark-blue)!important;
+}
+.hr {
+    border-top: 1px solid var(--dark-gray)!important;
+    margin: 70px 0px;
+}
+
+.text-dark-gray{
+  color: var(--dark-gray)!important;
+}
+.text-dark-gray-2{
+  color: var(--dark-gray-2)!important;
+}
+.text-gray-blue{
+  color: var(--gray-blue)!important;
+}
+.bg-light-green{
+  background: var(--light-green)!important;
+  color: var(--white)!important;
+}
+h2{
+  font-size: 42px!important
+}
+h3{
+  font-weight: 600!important;
+  font-size: 38px!important
+}
+h4{
+  font-weight: 600!important;
+  font-size: 34px!important;
+}
+h5{
+  font-size: 24px!important;
+}
+h6{
+  font-size: 20px!important;
+}
+.wrapper{
+  position: relative;
+  z-index: 15;
+}
+
+/* 
+===============
+Header CSS
+===============
+*/
+header{
+  position: relative;
+  z-index: 9999!important;
+}
+header.hovered{
+  background: var(--white)!important;
+}
+header.hovered a,header.hovered .nav-item.search a svg{
+  color: var(--dark-blue)!important;
+}
+header.hovered .header-top a{
+  color: var(--gray-blue)!important;
+}
+
+/* Header top*/
+.header-top{
+  z-index: 99;
+  position: relative;
+  background: transparent;
+  border-bottom: 1px solid var(--extra-light-green);
+  transition: height 0.2s ease;
+  height: 41px;
+}
+.header-top .social a, 
+.header-top .contact a {
+  color: var(--white);
+  padding: 10px 20px;
+  display: inline-block;
+  border-left: 1px solid var(--extra-light-green);
+  font-size: 13px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.header-top .social span:last-child a,
+.header-top .contact span:last-child a {
+  border-right: 1px solid var(--extra-light-green);
+}
+/* Header top*/
+
+
+/* Header bottom*/
+.navbar-brand {
+  letter-spacing: 2px;
+  font-size: 1.4rem !important;
+  font-weight: 600;
+  color: var(--white)!important;
+}
+nav.navbar {
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.1s;
+  background: transparent;
+  transition: 0.3s ;
+}
+nav.navbar.hovered {
+  border-color: var(--extra-light-green);
+}
+.nav-item .nav-link {
+  padding: 25px 15px !important;
+}
+.nav-item .nav-link:hover{
+  color: var(--dark-blue);
+}
+.nav-item a {
+  font-weight:600;
+  color: var(--white);
+  font-size: 16px;
+}
+.dropdown-menu {
+  display: block !important;
+  position: relative !important;
+  border: none !important;
+}
+
+.dropdown-item{
+  display: inline-block!important;
+  width: inherit!important;
+}
+
+.nav-item:hover .mega-menu.active{
+  display: block !important;
+  left: 0;
+  background: var(--white);
+  top: 101.5%;
+  padding: 0px 12px;
+}
+
+.mega-menu:before {
+    content: '';
+    background: #fff;
+    width: 130%;
+    position: absolute;
+    left: -20%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.nav-item:hover .mega-menu.active a {
+  color: var(--dark-blue);
+  padding-left: 0;
+  padding-right: 0;
+}
+.mega-menu.active a:hover{
+  color: var(--light-green)!important;
+  background: transparent;
+}
+li.nav-item ul {
+  z-index: 99!important;
+}
+header.sticky .header-top {
+    margin-top: -41px;
+    transition: margin-top 0.2s;
+}
+header.sticky{
+  background: var(--white);
+  box-shadow: var(--shadow-black);
+  z-index: 99999;
+}
+header.sticky .navbar a,
+header.sticky .nav-item.search a svg{
+  color: var(--dark-blue)!important;
+}
+header.sticky .navbar li.contact-btn a{
+  color:var(--white)!important;
+}
+
+
+
+/* Flag CSS Start*/
+li.nav-item.flag-item .nav-link.dropdown-toggle:after{
+  display: none;
+}
+li.nav-item.flag-item ul.flag {
+  left: -10px;
+  list-style: none;
+  box-shadow: var(--shadow-black);
+  width: 200px;
+  padding: 25px 25px;
+  text-decoration: none;
+  line-height: 2;
+  transition: 0.25s ease-in-out;
+  background: var(--white);
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: initial;
+}
+li.nav-item.flag-item:hover ul.flag,li.nav-item.flag-item ul.flag.active{
+  opacity: 1;
+  visibility: visible;
+}
+ul.flag li,
+ul.dropdown-menu li a {
+  position: relative !important;
+}
+ul.flag li:before,
+ul.dropdown-menu li a:before{
+  content: '';
+  width: 0;
+  text-align: center;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  background: var(--light-green);
+  transition: 0.2s;
+  transform: translateX(-50%);
+}
+ul.flag li:hover:before,
+ul.dropdown-menu li a:hover:before {
+  width: 100%;
+}
+ul.flag li a{
+  color: var(--dark-blue)!important;
+}
+ul.flag li:hover a{
+  color: var(--light-green)!important;
+}
+/* End Flag CSS*/
+
+/* Start Search CSS*/
+.nav-item.search a{
+  padding: 25px 15px!important;
+  display: block;
+}
+.nav-item.search .input-box {
+  display: flex;
+  align-items: center;
+  background: var(--white);
+  width: 220px!important;
+  top: 102%!important;
+  right: 0px!important;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.25s ease-in-out;
+  pointer-events: initial;
+}
+.nav-item.search .input-box.active {
+  opacity: 1;
+  visibility: visible;
+}
+.nav-item.search .input-box input {
+    background: #f0fff7;
+}
+.nav-item.search .input-box input:focus {
+  outline: none;
+}
+.nav-item.search .input-box svg{
+  color: var(--dark-gray);
+}
+.nav-item.search svg.svg-inline--fa.fa-xmark {
+  padding: 0px 2px;
+}
+
+/* .nav-item.search a svg,
+.nav-item.search:hover a svg,
+.nav-item.search a:hover svg{
+  color: var(--white)!important;
+} */
+.nav-item.search .input-box span.close {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* End Search CSS*/
+
+
+
+/* Start Contact btn CSS*/
+.nav-item.contact-btn a {
+  padding: 10px 35px !important;
+  margin-top: 15px;
+  margin-left: 15px;
+  border-radius: 5px;
+  display: block;
+  position: relative !important;
+  transition: 0.2s !important;
+  z-index: 2;
+  color: var(--white)!important;
+  border: 1px solid transparent;
+}
+.nav-item.contact-btn a:hover,
+.facility-item.left a:hover,
+.global-main a:hover,
+.article-inner a.read-more:hover {
+  background: 0 0 !important;
+  border: 1px solid var(--dark-blue);
+}
+.nav-item.contact-btn a::before,
+.facility-item.left a:before,
+.global-main a:before,
+.article-inner a.read-more:before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  transition: transform 0.25s cubic-bezier(0.38, 0.32, 0.36, 0.98) 0s,
+    -webkit-transform 0.25s cubic-bezier(0.38, 0.32, 0.36, 0.98) 0s;
+  transform: scaleX(0);
+  transform-origin: right center;
+  display: block;
+  border-radius: 5px;
+  background: var(--dark-blue);
+}
+.nav-item.contact-btn a:hover::before,
+.facility-item.left a:hover:before,
+.global-main a:hover:before,
+.article-inner a.read-more:hover:before {
+  background: var(--dark-blue);
+  transform: scale(1);
+  transform-origin: left center;
+  z-index: -1;
+}
+/* End Contact btn CSS*/
+
+
+
+/* Banner CSS */
+.banner {
+    background-image: url(/src/assets/images/renewable3.jpg);
+    height: 1000px;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 280px;
+    position: relative;
+    z-index:1;
+}
+.banner-text-part{
+  color: var(--white)!important;
+}
+.banner-text-part h1{
+  color: var(--white);
+  font-size: 60px;
+  line-height: 1.3;
+  font-weight: 600;
+}
+.banner-text-part p{
+  font-size: 18px;
+  font-weight: 500;
+}
+.banner-text-part button {
+    border-radius: 50%;
+    opacity: 0.9;
+    background: var(--white);
+    border: 20px solid var(--white);
+    font-size: 20px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    color: var(--light-green);
+    transition: transform 0.2s ease-in-out;
+    transition: 0.25s;
+    transform: scale(1.1);
+    box-shadow: var(--shadow-black-2);
+}
+.banner-text-part button:hover{
+    border: 4px solid var(--white);
+    background: transparent;
+    color: var(--white);
+    transform: scale(1);
+}
+
+/* Service CSS */
+.service {
+  /* transform: translateY(-140px); */
+  background: var(--white);
+}
+.service-section {
+  transform: translateY(-140px);
+}
+.service-item {
+    background: var(--white);
+    box-shadow: var(--shadow-black);
+    border: 1px solid var(--dark-gray-2);
+    padding: 35px;
+    transition: 0.25s;
+    position: relative;
+    border-radius: 5px;
+}
+.service-item:hover{
+  transform: translateY(-10px);
+}
+.service-item:before{
+  content:"";
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+  bottom:0;
+  width:0;
+  height: 5px;
+  transition: 0.25s;
+  background: var(--light-green);
+  border-radius: 5px;
+}
+.service-item:hover:before{
+  width: 100%;
+}
+.service-item a{
+  transition: 0.2s;
+}
+.service-item a:hover{
+  color: var(--dark-blue)!important;
+}
+
+
+/* Facilities css */
+.facility{
+  margin-top: -50px;
+  background: var(--white);
+}
+.facility-item.left{
+  margin-top: 120px;
+}
+.facility-item p{
+  font-size: 18px;
+  padding-right: 20px;
+  letter-spacing: 0.2px;
+}
+.facility-item.left a,
+.global-main a{
+  border: 1px solid transparent;
+  transition: 0.2s;
+}
+.facility-part {
+    height: 700px;
+    padding: 30px 0px;
+}
+.facility-image-box{
+  width: 54%;
+}
+.facility-image-box.box-2{
+  top: 0%;
+  right: 0%;
+}
+.facility-image-box.box-1:before {
+    content: '';
+    position: absolute;
+    bottom: -140px;
+    left: 0;
+    height: 165px;
+    width: 310px;
+    -webkit-mask-image: url(@/assets/images/dots.svg);
+    mask-image: url(@/assets/images/dots.svg);
+    z-index: 0;
+    -webkit-mask-size: 18px;
+    background-color: var(--light-green);
+}
+.facility-image-box.box-2:before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    right: 0;
+    height: 165px;
+    width: 164px;
+    -webkit-mask-image: url(@/assets/images/dots.svg);
+    mask-image: url(@/assets/images/dots.svg);
+    z-index: 0;
+    -webkit-mask-size: 18px;
+    background-color: var(--light-green);
+}
+.facility-image-box img{
+  position:relative;
+  box-shadow: var(--shadow-black);
+  border-radius: 8px;
+  display: block;
+}
+.facility-image-box.box-1 img{
+  left: 5px;
+  z-index: 3;
+}
+.facility-image-box.box-2 img {
+  z-index: 2;
+  right: 34%;
+  top: 70px;
+}
+
+
+/* 
+==================
+Project CSS 
+=================
+*/
+.project-main{
+  background: var(--dark-blue-2);
+}
+.project-item.left {
+  background-image: url(/src/assets/images/renewable6.jpg);
+  background-size: cover;
+  background-position: top;
+  height: 790px;
+}
+
+.project-left-info{
+  position: absolute;
+  width: 290px;
+}
+.project-left-info.info1 {
+    top: 67%;
+    right: 8%;
+}
+.project-left-info.info2 {
+    top: 37%;
+    left: 8%;
+}
+.project-left-info span svg {
+    color: var(--dark-blue);
+    background: var(--white);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    padding: 10px;
+}
+.project-left-info .info-details {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 5px;
+    transform: translateY(-130%);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
+    pointer-events: initial;
+}
+.project-left-info .info-details h6{
+  color: var(--dark-blue);
+  letter-spacing: -0.3px;
+}
+.project-left-info .info-details p{
+  font-size: 15px;
+  font-weight: 500;
+}
+.project-left-info span:hover + .info-details{
+  transform: translateY(-135%);
+  visibility: visible;
+  opacity: 1;
+}
+
+.project-item.right {
+    padding: 100px 130px;
+}
+
+.project-item h4{
+  color: var(--white);
+}
+.project-inner-text h5,.project-inner-text p{
+  color: var(--white);
+}
+
+
+
+/*
+==============
+Energy CSS 
+==============
+*/
+.energy{
+  background: var(--white);
+}
+.energy .container{
+  max-width: 1200px!important;
+}
+.title-part h3{
+  color: var(--dark-blue);
+}
+
+.image-part a {
+  outline: 1px solid transparent;
+  border-radius: 8px;
+  display: block;
+  background: var(--white);
+  transition: 0.2s;
+}
+.image-part a:hover{
+  outline: 1px solid var(--off-white)!important;
+  box-shadow: var(--shadow-black);
+}
+.image-part a img{
+  width: 100%;
+  transition: 0.2s;
+}
+.image-part a:hover img{
+  transform: scale(0.94);
+}
+.details-part h6 {
+  font-size: 18px!important;
+  font-weight: 500!important;
+  letter-spacing: 0.5px;
+}
+.details-part p{
+  font-weight: 500!important;
+  font-size: 15px;
+}
+.details-part a{
+  font-weight: 500;
+  transition: 0.2s;
+}
+.details-part a:hover{
+  color: var(--dark-blue)!important;
+}
+
+
+/* Renewable css */
+.renewable{
+  background: var(--white);
+}
+.renewable-main{
+  padding-bottom: 110px!important;
+}
+.renewable p.subtitle{
+  font-size: 18px!important;
+  font-weight: 400;
+}
+.renewable-item .number span {
+    background: var(--light-green);
+    color: var(--white);
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    line-height: 70px;
+    border-radius: 50%;
+    font-size: 24px;
+    position: relative;
+}
+.renewable-item .number span:before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 1px;
+    background: var(--dark-gray-2);
+    opacity: 0.7;
+    top: 50%;
+    left: 90px;
+}
+.renewable-main .col-sec:last-child .renewable-item .number span:before{
+  display: none;
+}
+
+.renewable-item .number .hover {
+    width: 85px;
+    height: 85px;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    background: var(--extra-light-green);
+}
+.renewable-item .number .hover:before {
+    content: '';
+    width: 100px;
+    height: 100px;
+    background: rgb(0 214 100 / 9%);
+    left: -7px;
+    top: -7px;
+}
+.renewable-item .number .hover,
+.renewable-item .number .hover:before {
+  position: absolute;
+  border-radius: 50%;
+  transition: 0.3s;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: initial;
+}
+.renewable-item:hover .number .hover,
+.renewable-item:hover .number .hover:before{
+  opacity: 1!important;
+  visibility: visible!important;
+}
+
+
+
+/*
+==========================
+Responsibility CSS
+==========================
+*/
+.project-item.responsibility-item.right {
+  padding: 110px 110px;
+  padding-left: 210px;
+}
+.project-item.responsibility-item.left{
+  background-image: url(/src/assets/images/renewable7.jpg);
+}
+.project-left-info.responsibility-left-info.info1 {
+  top: 29%;
+  right: 50%;
+  transform: translate(70%,0%);
+}
+.project-left-info.responsibility-left-info.info2 {
+  top: 41%;
+  left: 3%;
+}
+.project-left-info.responsibility-left-info.info3 {
+  top: 67%;
+  left: 50%;
+  transform: translateX(-57%);
+}
+
+
+/* World Cleaner CSS */
+.world-clean{
+  padding: 100px 0px;
+  background: var(--white);
+}
+
+.world-clean-header p{
+  font-size: 18px;
+}
+.progress-details p{
+  font-size: 16px;
+}
+
+
+/*
+============
+Progress CSS 
+=============
+*/
+.stat-circle {
+  position: relative;
+}
+.stat-circle:before {
+    content: '';
+    position: absolute;
+    background: var(--white);
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid var(--dark-gray-2);
+    box-shadow: var(--shadow-black);
+}
+.stat-circle circle.bg {
+    fill: none;
+    stroke-width: 2;
+    stroke: #CCD2E3;
+}
+.stat-circle circle.progress {
+  fill: none;
+  stroke: var(--light-green);
+  stroke-width: 2;
+  stroke-dasharray: 30 51;
+  stroke-linecap: round;
+  /* animation: progressAnimation 1.5s ease forwards; */
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+
+.animate .stat-circle circle.progress {
+  animation: progressAnimation 1s linear forwards;
+}
+.animate .stat-circle text {
+  animation: textPercentage 0.5s linear forwards;
+}
+.stat-circle text {
+    font-size: 3px;
+    text-anchor: middle;
+    fill: var(--dark-blue);
+    font-weight: 600;
+}
+@keyframes progressAnimation {
+  to {
+    stroke-dasharray: 51;
+  }
+}
+@keyframes textPercentage{
+  to{
+    transition: 0.3s ease;
+  }
+}
+
+/*
+============
+Global CSS
+============
+*/
+.global {
+  background-image: url(/src/assets/images/renewable8.jpg);
+  height: 550px;
+  background-attachment: fixed;
+  padding: 140px 0px;
+  color: var(--white);
+}
+.global a{
+  z-index: 1;
+}
+
+
+/* 
+=============
+Article CSS 
+=============
+*/
+.article {
+  padding: 100px 0px;
+  background: var(--white);
+  position: relative;
+  margin-bottom: 520px!important;
+}
+.article-main-item.right a {
+    background: var(--dark-blue);
+    color: var(--white);
+    padding: 15px 35px;
+    border-radius: 5px;
+    transition:0.2s;
+    border: 1px solid transparent;
+    font-weight: 500;
+    font-size: 17px;
+}
+.article-main-item.right a:hover {
+  background: 0 0 !important;
+  border: 1px solid var(--light-green);
+}
+.article-main-item.right a:before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  transition: transform 0.25s cubic-bezier(0.38, 0.32, 0.36, 0.98) 0s,
+    -webkit-transform 0.25s cubic-bezier(0.38, 0.32, 0.36, 0.98) 0s;
+  transform: scaleX(0);
+  transform-origin: right center;
+  display: block;
+  border-radius: 5px;
+  background: var(--light-green);
+}
+.article-main-item.right a:hover:before {
+  background: var(--light-green);
+  transform: scale(1);
+  transform-origin: left center;
+  z-index: -1;
+}
+
+.article-outer .article-inner{
+  border: 1px solid var(--dark-gray-2);
+  padding: 25px 40px;
+  transition: 0.2s;
+}
+.article-outer .article-inner:hover{
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-black-2);
+}
+.article-inner a{
+  transition: 0.2s;
+}
+.article-inner a:first-child {
+    background: #e5fbef;
+    padding: 2px 12px;
+    font-size: 15px;
+    border-radius: 15px;
+    font-weight: 500;
+}
+.article-inner a:first-child:hover{
+    color: var(--white)!important;
+    background: var(--light-green);
+}
+.article-inner a:first-child svg{
+  font-size: 12px;
+}
+
+.article-inner a:nth-child(2) {
+    font-size: 22px;
+    letter-spacing: -0.5px!important;
+}
+
+.article-inner a:nth-child(2):hover{
+  color: var(--light-green)!important;
+}
+
+.article-inner a.read-more {
+  border: 1px solid transparent;
+  padding: 10px 35px!important;
+}
+
+
+
+
+/* 
+============
+Footer CSS
+============
+*/
+footer {
+    background: var(--dark-blue-2);
+    margin-top: 80px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.footer-main hr{
+  opacity: 0.7;
+  border: 1px solid var(--extra-light-green)!important;
+}
+.top-menu ul li{
+  padding: 0px 15px;
+}
+.top-menu ul li.nav-item:first-child{
+  padding-left:0;
+}
+.top-menu ul li a{
+  padding: 10px 0px!important;
+}
+.top-menu .social span a{
+  padding: 10px 15px!important;
+}
+.top-menu .social span:last-child a{
+  padding-right: 0!important;
+}
+
+.top-menu ul li a,
+.top-menu .social span a,
+.bottom-item ul li a{
+  font-family: 'Roboto'!important;
+  font-weight: 500;
+  color: var(--white);
+  display: inline-block;
+  position: relative;
+}
+.top-menu ul li a:hover,
+.top-menu .social span a:hover,
+.middle-item ul li a:hover,
+.bottom-item ul li a:hover{
+  color: var(--light-green)!important;
+}
+.middle-item h5{
+  font-size: 20px!important;
+  color: var(--white);
+}
+.middle-item ul li a{
+  padding: 10px 0px;
+  font-family: 'Roboto'!important;
+  font-weight: 500;
+  color: var(--white);
+  display: inline-block;
+}
+.middle-item ul li a{
+  position: relative;
+}
+
+.middle-item ul li,
+.middle-item.last ul li a{
+  font-family: 'Roboto'!important;
+  font-weight: 400;
+  color: var(--white);
+  display: inline-block;
+  padding: 0;
+}
+.middle-item ul li a:before,
+.top-menu ul li a:before {
+content: '';
+width: 0;
+text-align: center;
+height: 2px;
+position: absolute;
+bottom: 0;
+left: 50%;
+background: var(--light-green);
+transition: 0.2s;
+transform: translateX(-50%);
+}
+.middle-item ul li a:hover:before,
+.top-menu ul li a:hover:before {
+width: 100%;
+}
+
+.bottom-item ul li a{
+  padding: 0px 5px;
+}
