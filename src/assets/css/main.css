@@ -196,6 +196,7 @@ nav.navbar.hovered {
     width: 100vw;
     position: absolute;
     left: calc(630px - 50vw);
+    top: 0;
     bottom: 0;
 }
 .nav-item:hover .mega-menu.active a {
