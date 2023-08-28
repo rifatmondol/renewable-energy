@@ -37,7 +37,7 @@
                 <div class="project-inner responsibility-inner">
                     <div class="row">
                         <div class="col-md-12 mt-5" v-for="item in items" :key="item">
-                            <div class="project-inner-item responsibility-inner-item d-flex justify-content-between">
+                            <div class="project-inner-item responsibility-inner-item d-flex">
                                 <div class="project-inner-image responsibility-inner-image mb-4 me-md-4">
                                     <img :src="item.src" :alt="item.src">
                                 </div>
